@@ -1,0 +1,9 @@
+.infobtn{
+    border-radius: 25px;
+    margin-left: 2em;
+    background: lightslategrey;
+}s
+
+.infobtn:hover{
+    background: aliceblue !important;
+}

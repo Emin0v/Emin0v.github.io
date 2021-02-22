@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.ProfilingEntity" table="PROFILING" schema="information_schema">
+        <property name="queryId" column="QUERY_ID"/>
+        <property name="seq" column="SEQ"/>
+        <property name="state" column="STATE"/>
+        <property name="duration" column="DURATION"/>
+        <property name="cpuUser" column="CPU_USER"/>
+        <property name="cpuSystem" column="CPU_SYSTEM"/>
+        <property name="contextVoluntary" column="CONTEXT_VOLUNTARY"/>
+        <property name="contextInvoluntary" column="CONTEXT_INVOLUNTARY"/>
+        <property name="blockOpsIn" column="BLOCK_OPS_IN"/>
+        <property name="blockOpsOut" column="BLOCK_OPS_OUT"/>
+        <property name="messagesSent" column="MESSAGES_SENT"/>
+        <property name="messagesReceived" column="MESSAGES_RECEIVED"/>
+        <property name="pageFaultsMajor" column="PAGE_FAULTS_MAJOR"/>
+        <property name="pageFaultsMinor" column="PAGE_FAULTS_MINOR"/>
+        <property name="swaps" column="SWAPS"/>
+        <property name="sourceFunction" column="SOURCE_FUNCTION"/>
+        <property name="sourceFile" column="SOURCE_FILE"/>
+        <property name="sourceLine" column="SOURCE_LINE"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.StatisticsEntity" table="STATISTICS" schema="information_schema">
+        <property name="tableCatalog" column="TABLE_CATALOG"/>
+        <property name="tableSchema" column="TABLE_SCHEMA"/>
+        <property name="tableName" column="TABLE_NAME"/>
+        <property name="nonUnique" column="NON_UNIQUE"/>
+        <property name="indexSchema" column="INDEX_SCHEMA"/>
+        <property name="indexName" column="INDEX_NAME"/>
+        <property name="seqInIndex" column="SEQ_IN_INDEX"/>
+        <property name="columnName" column="COLUMN_NAME"/>
+        <property name="collation" column="COLLATION"/>
+        <property name="cardinality" column="CARDINALITY"/>
+        <property name="subPart" column="SUB_PART"/>
+        <property name="packed" column="PACKED"/>
+        <property name="nullable" column="NULLABLE"/>
+        <property name="indexType" column="INDEX_TYPE"/>
+        <property name="comment" column="COMMENT"/>
+        <property name="indexComment" column="INDEX_COMMENT"/>
+    </class>
+</hibernate-mapping>

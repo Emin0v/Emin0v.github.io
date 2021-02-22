@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.TriggersEntity" table="TRIGGERS" schema="information_schema">
+        <property name="triggerCatalog" column="TRIGGER_CATALOG"/>
+        <property name="triggerSchema" column="TRIGGER_SCHEMA"/>
+        <property name="triggerName" column="TRIGGER_NAME"/>
+        <property name="eventManipulation" column="EVENT_MANIPULATION"/>
+        <property name="eventObjectCatalog" column="EVENT_OBJECT_CATALOG"/>
+        <property name="eventObjectSchema" column="EVENT_OBJECT_SCHEMA"/>
+        <property name="eventObjectTable" column="EVENT_OBJECT_TABLE"/>
+        <property name="actionOrder" column="ACTION_ORDER"/>
+        <property name="actionCondition" column="ACTION_CONDITION"/>
+        <property name="actionStatement" column="ACTION_STATEMENT"/>
+        <property name="actionOrientation" column="ACTION_ORIENTATION"/>
+        <property name="actionTiming" column="ACTION_TIMING"/>
+        <property name="actionReferenceOldTable" column="ACTION_REFERENCE_OLD_TABLE"/>
+        <property name="actionReferenceNewTable" column="ACTION_REFERENCE_NEW_TABLE"/>
+        <property name="actionReferenceOldRow" column="ACTION_REFERENCE_OLD_ROW"/>
+        <property name="actionReferenceNewRow" column="ACTION_REFERENCE_NEW_ROW"/>
+        <property name="created" column="CREATED"/>
+        <property name="sqlMode" column="SQL_MODE"/>
+        <property name="definer" column="DEFINER"/>
+        <property name="characterSetClient" column="CHARACTER_SET_CLIENT"/>
+        <property name="collationConnection" column="COLLATION_CONNECTION"/>
+        <property name="databaseCollation" column="DATABASE_COLLATION"/>
+    </class>
+</hibernate-mapping>

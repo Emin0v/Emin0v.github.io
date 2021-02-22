@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.TableConstraintsEntity" table="TABLE_CONSTRAINTS" schema="information_schema">
+        <property name="constraintCatalog" column="CONSTRAINT_CATALOG"/>
+        <property name="constraintSchema" column="CONSTRAINT_SCHEMA"/>
+        <property name="constraintName" column="CONSTRAINT_NAME"/>
+        <property name="tableSchema" column="TABLE_SCHEMA"/>
+        <property name="tableName" column="TABLE_NAME"/>
+        <property name="constraintType" column="CONSTRAINT_TYPE"/>
+    </class>
+</hibernate-mapping>

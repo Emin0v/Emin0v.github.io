@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.InnodbCmpEntity" table="INNODB_CMP" schema="information_schema">
+        <property name="pageSize" column="page_size"/>
+        <property name="compressOps" column="compress_ops"/>
+        <property name="compressOpsOk" column="compress_ops_ok"/>
+        <property name="compressTime" column="compress_time"/>
+        <property name="uncompressOps" column="uncompress_ops"/>
+        <property name="uncompressTime" column="uncompress_time"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.InnodbBufferPoolStatsEntity" table="INNODB_BUFFER_POOL_STATS"
+           schema="information_schema">
+        <property name="poolId" column="POOL_ID"/>
+        <property name="poolSize" column="POOL_SIZE"/>
+        <property name="freeBuffers" column="FREE_BUFFERS"/>
+        <property name="databasePages" column="DATABASE_PAGES"/>
+        <property name="oldDatabasePages" column="OLD_DATABASE_PAGES"/>
+        <property name="modifiedDatabasePages" column="MODIFIED_DATABASE_PAGES"/>
+        <property name="pendingDecompress" column="PENDING_DECOMPRESS"/>
+        <property name="pendingReads" column="PENDING_READS"/>
+        <property name="pendingFlushLru" column="PENDING_FLUSH_LRU"/>
+        <property name="pendingFlushList" column="PENDING_FLUSH_LIST"/>
+        <property name="pagesMadeYoung" column="PAGES_MADE_YOUNG"/>
+        <property name="pagesNotMadeYoung" column="PAGES_NOT_MADE_YOUNG"/>
+        <property name="pagesMadeYoungRate" column="PAGES_MADE_YOUNG_RATE"/>
+        <property name="pagesMadeNotYoungRate" column="PAGES_MADE_NOT_YOUNG_RATE"/>
+        <property name="numberPagesRead" column="NUMBER_PAGES_READ"/>
+        <property name="numberPagesCreated" column="NUMBER_PAGES_CREATED"/>
+        <property name="numberPagesWritten" column="NUMBER_PAGES_WRITTEN"/>
+        <property name="pagesReadRate" column="PAGES_READ_RATE"/>
+        <property name="pagesCreateRate" column="PAGES_CREATE_RATE"/>
+        <property name="pagesWrittenRate" column="PAGES_WRITTEN_RATE"/>
+        <property name="numberPagesGet" column="NUMBER_PAGES_GET"/>
+        <property name="hitRate" column="HIT_RATE"/>
+        <property name="youngMakePerThousandGets" column="YOUNG_MAKE_PER_THOUSAND_GETS"/>
+        <property name="notYoungMakePerThousandGets" column="NOT_YOUNG_MAKE_PER_THOUSAND_GETS"/>
+        <property name="numberPagesReadAhead" column="NUMBER_PAGES_READ_AHEAD"/>
+        <property name="numberReadAheadEvicted" column="NUMBER_READ_AHEAD_EVICTED"/>
+        <property name="readAheadRate" column="READ_AHEAD_RATE"/>
+        <property name="readAheadEvictedRate" column="READ_AHEAD_EVICTED_RATE"/>
+        <property name="lruIoTotal" column="LRU_IO_TOTAL"/>
+        <property name="lruIoCurrent" column="LRU_IO_CURRENT"/>
+        <property name="uncompressTotal" column="UNCOMPRESS_TOTAL"/>
+        <property name="uncompressCurrent" column="UNCOMPRESS_CURRENT"/>
+    </class>
+</hibernate-mapping>

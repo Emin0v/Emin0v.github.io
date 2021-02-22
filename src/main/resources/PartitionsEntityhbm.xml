@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.PartitionsEntity" table="PARTITIONS" schema="information_schema">
+        <property name="tableCatalog" column="TABLE_CATALOG"/>
+        <property name="tableSchema" column="TABLE_SCHEMA"/>
+        <property name="tableName" column="TABLE_NAME"/>
+        <property name="partitionName" column="PARTITION_NAME"/>
+        <property name="subpartitionName" column="SUBPARTITION_NAME"/>
+        <property name="partitionOrdinalPosition" column="PARTITION_ORDINAL_POSITION"/>
+        <property name="subpartitionOrdinalPosition" column="SUBPARTITION_ORDINAL_POSITION"/>
+        <property name="partitionMethod" column="PARTITION_METHOD"/>
+        <property name="subpartitionMethod" column="SUBPARTITION_METHOD"/>
+        <property name="partitionExpression" column="PARTITION_EXPRESSION"/>
+        <property name="subpartitionExpression" column="SUBPARTITION_EXPRESSION"/>
+        <property name="partitionDescription" column="PARTITION_DESCRIPTION"/>
+        <property name="tableRows" column="TABLE_ROWS"/>
+        <property name="avgRowLength" column="AVG_ROW_LENGTH"/>
+        <property name="dataLength" column="DATA_LENGTH"/>
+        <property name="maxDataLength" column="MAX_DATA_LENGTH"/>
+        <property name="indexLength" column="INDEX_LENGTH"/>
+        <property name="dataFree" column="DATA_FREE"/>
+        <property name="createTime" column="CREATE_TIME"/>
+        <property name="updateTime" column="UPDATE_TIME"/>
+        <property name="checkTime" column="CHECK_TIME"/>
+        <property name="checksum" column="CHECKSUM"/>
+        <property name="partitionComment" column="PARTITION_COMMENT"/>
+        <property name="nodegroup" column="NODEGROUP"/>
+        <property name="tablespaceName" column="TABLESPACE_NAME"/>
+    </class>
+</hibernate-mapping>

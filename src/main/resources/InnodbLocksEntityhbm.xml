@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.InnodbLocksEntity" table="INNODB_LOCKS" schema="information_schema">
+        <property name="lockId" column="lock_id"/>
+        <property name="lockTrxId" column="lock_trx_id"/>
+        <property name="lockMode" column="lock_mode"/>
+        <property name="lockType" column="lock_type"/>
+        <property name="lockTable" column="lock_table"/>
+        <property name="lockIndex" column="lock_index"/>
+        <property name="lockSpace" column="lock_space"/>
+        <property name="lockPage" column="lock_page"/>
+        <property name="lockRec" column="lock_rec"/>
+        <property name="lockData" column="lock_data"/>
+    </class>
+</hibernate-mapping>

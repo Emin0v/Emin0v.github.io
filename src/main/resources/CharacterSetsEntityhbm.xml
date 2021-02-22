@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.CharacterSetsEntity" table="CHARACTER_SETS" schema="information_schema">
+        <property name="characterSetName" column="CHARACTER_SET_NAME"/>
+        <property name="defaultCollateName" column="DEFAULT_COLLATE_NAME"/>
+        <property name="description" column="DESCRIPTION"/>
+        <property name="maxlen" column="MAXLEN"/>
+    </class>
+</hibernate-mapping>

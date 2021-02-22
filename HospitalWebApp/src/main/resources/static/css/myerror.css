@@ -1,0 +1,23 @@
+.my {
+    margin-top: 1em;
+    padding: 5em;
+}
+
+p {
+    box-sizing: border-box;
+    padding: 1em;
+    border: 2px solid red;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.mark {
+    color: red;
+    background: none;
+    padding-bottom: 3em;
+}
+
+.test {
+    justify-content: center !important;
+    align-items: center !important;
+}

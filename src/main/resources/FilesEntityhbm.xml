@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.FilesEntity" table="FILES" schema="information_schema">
+        <property name="fileId" column="FILE_ID"/>
+        <property name="fileName" column="FILE_NAME"/>
+        <property name="fileType" column="FILE_TYPE"/>
+        <property name="tablespaceName" column="TABLESPACE_NAME"/>
+        <property name="tableCatalog" column="TABLE_CATALOG"/>
+        <property name="tableSchema" column="TABLE_SCHEMA"/>
+        <property name="tableName" column="TABLE_NAME"/>
+        <property name="logfileGroupName" column="LOGFILE_GROUP_NAME"/>
+        <property name="logfileGroupNumber" column="LOGFILE_GROUP_NUMBER"/>
+        <property name="engine" column="ENGINE"/>
+        <property name="fulltextKeys" column="FULLTEXT_KEYS"/>
+        <property name="deletedRows" column="DELETED_ROWS"/>
+        <property name="updateCount" column="UPDATE_COUNT"/>
+        <property name="freeExtents" column="FREE_EXTENTS"/>
+        <property name="totalExtents" column="TOTAL_EXTENTS"/>
+        <property name="extentSize" column="EXTENT_SIZE"/>
+        <property name="initialSize" column="INITIAL_SIZE"/>
+        <property name="maximumSize" column="MAXIMUM_SIZE"/>
+        <property name="autoextendSize" column="AUTOEXTEND_SIZE"/>
+        <property name="creationTime" column="CREATION_TIME"/>
+        <property name="lastUpdateTime" column="LAST_UPDATE_TIME"/>
+        <property name="lastAccessTime" column="LAST_ACCESS_TIME"/>
+        <property name="recoverTime" column="RECOVER_TIME"/>
+        <property name="transactionCounter" column="TRANSACTION_COUNTER"/>
+        <property name="version" column="VERSION"/>
+        <property name="rowFormat" column="ROW_FORMAT"/>
+        <property name="tableRows" column="TABLE_ROWS"/>
+        <property name="avgRowLength" column="AVG_ROW_LENGTH"/>
+        <property name="dataLength" column="DATA_LENGTH"/>
+        <property name="maxDataLength" column="MAX_DATA_LENGTH"/>
+        <property name="indexLength" column="INDEX_LENGTH"/>
+        <property name="dataFree" column="DATA_FREE"/>
+        <property name="createTime" column="CREATE_TIME"/>
+        <property name="updateTime" column="UPDATE_TIME"/>
+        <property name="checkTime" column="CHECK_TIME"/>
+        <property name="checksum" column="CHECKSUM"/>
+        <property name="status" column="STATUS"/>
+        <property name="extra" column="EXTRA"/>
+    </class>
+</hibernate-mapping>

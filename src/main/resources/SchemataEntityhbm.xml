@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.SchemataEntity" table="SCHEMATA" schema="information_schema">
+        <property name="catalogName" column="CATALOG_NAME"/>
+        <property name="schemaName" column="SCHEMA_NAME"/>
+        <property name="defaultCharacterSetName" column="DEFAULT_CHARACTER_SET_NAME"/>
+        <property name="defaultCollationName" column="DEFAULT_COLLATION_NAME"/>
+        <property name="sqlPath" column="SQL_PATH"/>
+    </class>
+</hibernate-mapping>

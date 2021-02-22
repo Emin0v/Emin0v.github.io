@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.InnodbCmpmemResetEntity" table="INNODB_CMPMEM_RESET" schema="information_schema">
+        <property name="pageSize" column="page_size"/>
+        <property name="bufferPoolInstance" column="buffer_pool_instance"/>
+        <property name="pagesUsed" column="pages_used"/>
+        <property name="pagesFree" column="pages_free"/>
+        <property name="relocationOps" column="relocation_ops"/>
+        <property name="relocationTime" column="relocation_time"/>
+    </class>
+</hibernate-mapping>

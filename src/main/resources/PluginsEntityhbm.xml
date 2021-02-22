@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.PluginsEntity" table="PLUGINS" schema="information_schema">
+        <property name="pluginName" column="PLUGIN_NAME"/>
+        <property name="pluginVersion" column="PLUGIN_VERSION"/>
+        <property name="pluginStatus" column="PLUGIN_STATUS"/>
+        <property name="pluginType" column="PLUGIN_TYPE"/>
+        <property name="pluginTypeVersion" column="PLUGIN_TYPE_VERSION"/>
+        <property name="pluginLibrary" column="PLUGIN_LIBRARY"/>
+        <property name="pluginLibraryVersion" column="PLUGIN_LIBRARY_VERSION"/>
+        <property name="pluginAuthor" column="PLUGIN_AUTHOR"/>
+        <property name="pluginDescription" column="PLUGIN_DESCRIPTION"/>
+        <property name="pluginLicense" column="PLUGIN_LICENSE"/>
+        <property name="loadOption" column="LOAD_OPTION"/>
+    </class>
+</hibernate-mapping>

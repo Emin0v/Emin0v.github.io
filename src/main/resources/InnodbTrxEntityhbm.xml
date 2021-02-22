@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.InnodbTrxEntity" table="INNODB_TRX" schema="information_schema">
+        <property name="trxId" column="trx_id"/>
+        <property name="trxState" column="trx_state"/>
+        <property name="trxStarted" column="trx_started"/>
+        <property name="trxRequestedLockId" column="trx_requested_lock_id"/>
+        <property name="trxWaitStarted" column="trx_wait_started"/>
+        <property name="trxWeight" column="trx_weight"/>
+        <property name="trxMysqlThreadId" column="trx_mysql_thread_id"/>
+        <property name="trxQuery" column="trx_query"/>
+        <property name="trxOperationState" column="trx_operation_state"/>
+        <property name="trxTablesInUse" column="trx_tables_in_use"/>
+        <property name="trxTablesLocked" column="trx_tables_locked"/>
+        <property name="trxLockStructs" column="trx_lock_structs"/>
+        <property name="trxLockMemoryBytes" column="trx_lock_memory_bytes"/>
+        <property name="trxRowsLocked" column="trx_rows_locked"/>
+        <property name="trxRowsModified" column="trx_rows_modified"/>
+        <property name="trxConcurrencyTickets" column="trx_concurrency_tickets"/>
+        <property name="trxIsolationLevel" column="trx_isolation_level"/>
+        <property name="trxUniqueChecks" column="trx_unique_checks"/>
+        <property name="trxForeignKeyChecks" column="trx_foreign_key_checks"/>
+        <property name="trxLastForeignKeyError" column="trx_last_foreign_key_error"/>
+        <property name="trxAdaptiveHashLatched" column="trx_adaptive_hash_latched"/>
+        <property name="trxAdaptiveHashTimeout" column="trx_adaptive_hash_timeout"/>
+    </class>
+</hibernate-mapping>

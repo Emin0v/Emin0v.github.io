@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.InnodbBufferPageEntity" table="INNODB_BUFFER_PAGE" schema="information_schema">
+        <property name="poolId" column="POOL_ID"/>
+        <property name="blockId" column="BLOCK_ID"/>
+        <property name="space" column="SPACE"/>
+        <property name="pageNumber" column="PAGE_NUMBER"/>
+        <property name="pageType" column="PAGE_TYPE"/>
+        <property name="flushType" column="FLUSH_TYPE"/>
+        <property name="fixCount" column="FIX_COUNT"/>
+        <property name="isHashed" column="IS_HASHED"/>
+        <property name="newestModification" column="NEWEST_MODIFICATION"/>
+        <property name="oldestModification" column="OLDEST_MODIFICATION"/>
+        <property name="accessTime" column="ACCESS_TIME"/>
+        <property name="tableName" column="TABLE_NAME"/>
+        <property name="indexName" column="INDEX_NAME"/>
+        <property name="numberRecords" column="NUMBER_RECORDS"/>
+        <property name="dataSize" column="DATA_SIZE"/>
+        <property name="compressedSize" column="COMPRESSED_SIZE"/>
+        <property name="pageState" column="PAGE_STATE"/>
+        <property name="ioFix" column="IO_FIX"/>
+        <property name="isOld" column="IS_OLD"/>
+        <property name="freePageClock" column="FREE_PAGE_CLOCK"/>
+    </class>
+</hibernate-mapping>

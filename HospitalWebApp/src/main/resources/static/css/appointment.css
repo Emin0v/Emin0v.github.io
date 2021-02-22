@@ -1,0 +1,24 @@
+.mybtn {
+    background: #8a8a8a;
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+    width: 300px;
+}
+
+body {
+    margin: 20px;
+    background: azure;
+}
+
+.warninfo{
+    color: red ;
+    padding-left:1.5em;
+    font-weight: 500
+}
+
+label{
+    font-weight: 500;
+}

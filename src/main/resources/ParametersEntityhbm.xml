@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.ParametersEntity" table="PARAMETERS" schema="information_schema">
+        <property name="specificCatalog" column="SPECIFIC_CATALOG"/>
+        <property name="specificSchema" column="SPECIFIC_SCHEMA"/>
+        <property name="specificName" column="SPECIFIC_NAME"/>
+        <property name="ordinalPosition" column="ORDINAL_POSITION"/>
+        <property name="parameterMode" column="PARAMETER_MODE"/>
+        <property name="parameterName" column="PARAMETER_NAME"/>
+        <property name="dataType" column="DATA_TYPE"/>
+        <property name="characterMaximumLength" column="CHARACTER_MAXIMUM_LENGTH"/>
+        <property name="characterOctetLength" column="CHARACTER_OCTET_LENGTH"/>
+        <property name="numericPrecision" column="NUMERIC_PRECISION"/>
+        <property name="numericScale" column="NUMERIC_SCALE"/>
+        <property name="characterSetName" column="CHARACTER_SET_NAME"/>
+        <property name="collationName" column="COLLATION_NAME"/>
+        <property name="dtdIdentifier" column="DTD_IDENTIFIER"/>
+        <property name="routineType" column="ROUTINE_TYPE"/>
+    </class>
+</hibernate-mapping>

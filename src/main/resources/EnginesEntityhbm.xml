@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.EnginesEntity" table="ENGINES" schema="information_schema">
+        <property name="engine" column="ENGINE"/>
+        <property name="support" column="SUPPORT"/>
+        <property name="comment" column="COMMENT"/>
+        <property name="transactions" column="TRANSACTIONS"/>
+        <property name="xa" column="XA"/>
+        <property name="savepoints" column="SAVEPOINTS"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.AppointmentEntity" table="appointment" schema="hospitalweb">
+        <id name="id" column="id"/>
+        <property name="doctorId" column="doctor_id"/>
+        <property name="patientId" column="patient_id"/>
+        <property name="appDate" column="app_date"/>
+    </class>
+</hibernate-mapping>

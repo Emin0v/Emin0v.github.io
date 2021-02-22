@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.InnodbLockWaitsEntity" table="INNODB_LOCK_WAITS" schema="information_schema">
+        <property name="requestingTrxId" column="requesting_trx_id"/>
+        <property name="requestedLockId" column="requested_lock_id"/>
+        <property name="blockingTrxId" column="blocking_trx_id"/>
+        <property name="blockingLockId" column="blocking_lock_id"/>
+    </class>
+</hibernate-mapping>

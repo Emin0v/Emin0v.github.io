@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.TablespacesEntity" table="TABLESPACES" schema="information_schema">
+        <property name="tablespaceName" column="TABLESPACE_NAME"/>
+        <property name="engine" column="ENGINE"/>
+        <property name="tablespaceType" column="TABLESPACE_TYPE"/>
+        <property name="logfileGroupName" column="LOGFILE_GROUP_NAME"/>
+        <property name="extentSize" column="EXTENT_SIZE"/>
+        <property name="autoextendSize" column="AUTOEXTEND_SIZE"/>
+        <property name="maximumSize" column="MAXIMUM_SIZE"/>
+        <property name="nodegroupId" column="NODEGROUP_ID"/>
+        <property name="tablespaceComment" column="TABLESPACE_COMMENT"/>
+    </class>
+</hibernate-mapping>

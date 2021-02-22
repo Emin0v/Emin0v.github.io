@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.EventsEntity" table="EVENTS" schema="information_schema">
+        <property name="eventCatalog" column="EVENT_CATALOG"/>
+        <property name="eventSchema" column="EVENT_SCHEMA"/>
+        <property name="eventName" column="EVENT_NAME"/>
+        <property name="definer" column="DEFINER"/>
+        <property name="timeZone" column="TIME_ZONE"/>
+        <property name="eventBody" column="EVENT_BODY"/>
+        <property name="eventDefinition" column="EVENT_DEFINITION"/>
+        <property name="eventType" column="EVENT_TYPE"/>
+        <property name="executeAt" column="EXECUTE_AT"/>
+        <property name="intervalValue" column="INTERVAL_VALUE"/>
+        <property name="intervalField" column="INTERVAL_FIELD"/>
+        <property name="sqlMode" column="SQL_MODE"/>
+        <property name="starts" column="STARTS"/>
+        <property name="ends" column="ENDS"/>
+        <property name="status" column="STATUS"/>
+        <property name="onCompletion" column="ON_COMPLETION"/>
+        <property name="created" column="CREATED"/>
+        <property name="lastAltered" column="LAST_ALTERED"/>
+        <property name="lastExecuted" column="LAST_EXECUTED"/>
+        <property name="eventComment" column="EVENT_COMMENT"/>
+        <property name="originator" column="ORIGINATOR"/>
+        <property name="characterSetClient" column="CHARACTER_SET_CLIENT"/>
+        <property name="collationConnection" column="COLLATION_CONNECTION"/>
+        <property name="databaseCollation" column="DATABASE_COLLATION"/>
+    </class>
+</hibernate-mapping>

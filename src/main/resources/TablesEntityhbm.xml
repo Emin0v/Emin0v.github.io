@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.company.model.TablesEntity" table="TABLES" schema="information_schema">
+        <property name="tableCatalog" column="TABLE_CATALOG"/>
+        <property name="tableSchema" column="TABLE_SCHEMA"/>
+        <property name="tableName" column="TABLE_NAME"/>
+        <property name="tableType" column="TABLE_TYPE"/>
+        <property name="engine" column="ENGINE"/>
+        <property name="version" column="VERSION"/>
+        <property name="rowFormat" column="ROW_FORMAT"/>
+        <property name="tableRows" column="TABLE_ROWS"/>
+        <property name="avgRowLength" column="AVG_ROW_LENGTH"/>
+        <property name="dataLength" column="DATA_LENGTH"/>
+        <property name="maxDataLength" column="MAX_DATA_LENGTH"/>
+        <property name="indexLength" column="INDEX_LENGTH"/>
+        <property name="dataFree" column="DATA_FREE"/>
+        <property name="autoIncrement" column="AUTO_INCREMENT"/>
+        <property name="createTime" column="CREATE_TIME"/>
+        <property name="updateTime" column="UPDATE_TIME"/>
+        <property name="checkTime" column="CHECK_TIME"/>
+        <property name="tableCollation" column="TABLE_COLLATION"/>
+        <property name="checksum" column="CHECKSUM"/>
+        <property name="createOptions" column="CREATE_OPTIONS"/>
+        <property name="tableComment" column="TABLE_COMMENT"/>
+    </class>
+</hibernate-mapping>
