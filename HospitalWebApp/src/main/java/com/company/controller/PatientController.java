@@ -60,7 +60,8 @@ public class PatientController {
                                @RequestParam(value = "workDate") String workDate,
                                @RequestParam(value = "confirm") String confirm) {
 
-       ModelAndView mv = new ModelAndView("success");
+       ModelAndView successModel = new ModelAndView("success");
+       ModelAndView errorModel = new ModelAndView("appointerror");
         if (confirm.equals("Confirm")) {
             Appointment a = new Appointment();
             a.setPatientId(new User(patientId));
@@ -72,17 +73,17 @@ public class PatientController {
 
             if(control){
                 String[] arr = workDate.split("T");
-                mv.addObject("date" , arr[0]);
-                mv.addObject("hour",arr[1]);
+                successModel.addObject("date" , arr[0]);
+                successModel.addObject("hour",arr[1]);
                 Optional<User> doctorName = userRepository.findById(doctorId);
                 Optional<User> patientName = userRepository.findById(patientId);
-                mv.addObject("doctorName" , doctorName.get().getName());
-                mv.addObject("patientName" , patientName.get().getName());
+                successModel.addObject("doctorName" , doctorName.get().getName());
+                successModel.addObject("patientName" , patientName.get().getName());
+                return successModel;
             }
 
-            return mv;
         }
-        return null;
+        return errorModel;
     }
     @RequestMapping(method = RequestMethod.GET, value = "/success")
     public String successMethod(){
@@ -91,7 +92,7 @@ public class PatientController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/myerror")
     public String errorMethod(){
-        return "myerror";
+        return "appointerror";
     }
 
 }
