@@ -83,8 +83,8 @@
             <select oninput="setDoctor()" onchange="disWorkDate() ; activebtn()" name="clinicId" id="clinic"
                     class="form-select">
                 <option value="0">Clinic seçin</option>
-                <c:forEach items="${workerList}" var="c">
-                    <option value="${c.clinicId.id}">${c.clinicId.name}</option>
+                <c:forEach items="${clinics}" var="c">
+                    <option value="${c.id}">${c.name}</option>
                 </c:forEach>
             </select>
             <div class="validate"></div>

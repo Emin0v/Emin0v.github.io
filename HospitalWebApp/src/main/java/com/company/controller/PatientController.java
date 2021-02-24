@@ -3,6 +3,7 @@ package com.company.controller;
 import com.company.dao.impl.UserRepository;
 import com.company.model.*;
 import com.company.service.inter.AppointmentServiceInter;
+import com.company.service.inter.ClinicServiceInter;
 import com.company.service.inter.UserServiceInter;
 import com.company.service.inter.WorkHourServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,9 @@ public class PatientController {
     private AppointmentServiceInter appointmentServiceInter;
 
     @Autowired
+    private ClinicServiceInter clinicServiceInter;
+
+    @Autowired
     private WorkHourServiceInter workHourServiceInter;
 
     private ModelAndView mv = new ModelAndView("appointment");
@@ -41,8 +45,10 @@ public class PatientController {
         User user = userServiceInter.getUser(authentication.getName());
         List<Worker> workerList = userServiceInter.getUserAndClinic();
         List<WorkHour> workHours = workHourServiceInter.getWorkHourList();
+        List<Clinic> clinics = clinicServiceInter.getList();
 
         mv.addObject("user", user);
+        mv.addObject("clinics",clinics);
         mv.addObject("workerList", workerList);
         mv.addObject("workHours", workHours);
         return mv;
