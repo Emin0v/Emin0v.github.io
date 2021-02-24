@@ -34,7 +34,7 @@ public class DoctorController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = userServiceInter.getUser(authentication.getName());
         List<WorkHour> list = workHourServiceInter.getWorkHourList(user.getId());
-        ModelAndView mv = new ModelAndView("indexDoctor");
+        ModelAndView mv = new ModelAndView("doctor");
         mv.addObject("user", user);
         mv.addObject("myDate", list);
         return mv;
@@ -67,7 +67,6 @@ public class DoctorController {
     @RequestMapping(method = RequestMethod.GET, value = "/workingHours")
     public ModelAndView showWorkHours(@RequestParam(value = "id") Integer doctorId) {
 
-        System.out.println("doctorId="+doctorId);
         List<Appointment> list = appointmentServiceInter.getDoctorList(doctorId);
         ModelAndView mv = new ModelAndView("doctor/workingHours");
 

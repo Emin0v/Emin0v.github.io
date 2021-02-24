@@ -98,8 +98,11 @@
             </ul>
         </nav><!-- .nav-menu -->
 
-        <form action="appointment" method="get">
-            <button class="appointment-btn scrollto">Randevu al</button>
+        <form action="workingHours" method="get">
+            <input type="hidden" name="id" value="${user.id}">
+            <button class="appointment-btn scrollto">
+                <i class="fas fa-hospital-user"></i> Iş vaxtları
+            </button>
         </form>
 
         <form action="logout">
@@ -118,6 +121,7 @@
         <h1>Medilab səhifəsinə xoş gəldiniz</h1>
         <a href="#about" class="btn-get-started scrollto">Get Started</a>
     </div>
+
 </section><!-- End Hero -->
 
 <main id="main">

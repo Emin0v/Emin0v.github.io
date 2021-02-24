@@ -62,7 +62,7 @@ public class PatientController {
 
        ModelAndView successModel = new ModelAndView("success");
        ModelAndView errorModel = new ModelAndView("appointerror");
-        if (confirm.equals("Confirm")) {
+        if (confirm.equals("Təsdiqlə")) {
             Appointment a = new Appointment();
             a.setPatientId(new User(patientId));
             a.setDoctorId(new User(doctorId));
@@ -85,14 +85,14 @@ public class PatientController {
         }
         return errorModel;
     }
-    @RequestMapping(method = RequestMethod.GET, value = "/success")
-    public String successMethod(){
-        return "success";
-    }
-
-    @RequestMapping(method = RequestMethod.GET, value = "/myerror")
-    public String errorMethod(){
-        return "appointerror";
-    }
+//    @RequestMapping(method = RequestMethod.GET, value = "/success")
+//    public String successMethod(){
+//        return "success";
+//    }
+//
+//    @RequestMapping(method = RequestMethod.GET, value = "/myerror")
+//    public String errorMethod(){
+//        return "appointerror";
+//    }
 
 }
