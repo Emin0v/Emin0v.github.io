@@ -1,5 +1,7 @@
 package com.company.controller;
+import com.company.model.Appointment;
 import com.company.model.User;
+import com.company.service.inter.AppointmentServiceInter;
 import com.company.service.inter.ClinicServiceInter;
 import com.company.service.inter.UserServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,9 @@ public class LoginController {
     @Autowired
     private ClinicServiceInter clinicServiceInter;
 
+    @Autowired
+    private AppointmentServiceInter appointmentServiceInter;
+
    private  ModelAndView mv = new ModelAndView("index");
 
     @RequestMapping(method = RequestMethod.GET, value = "/login")
@@ -33,18 +38,20 @@ public class LoginController {
     public ModelAndView index() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = userServiceInter.getUser(authentication.getName());
+        List<Appointment> appointments = appointmentServiceInter.getPatientList(user.getId());
+
 //        Collections.sort(workerList,new TestSort());
 
         mv.addObject("user", user);
+        mv.addObject("appointments",appointments);
 
         return mv;
     }
 
     @RequestMapping(method = RequestMethod.POST , value = "/index")
     public ModelAndView index(@RequestParam(value = "clinicId", required = false) Integer clinicId) {
-        List<User> doctorList = clinicServiceInter.getClinicDoctorList(clinicId);
-
-        mv.addObject("doctorList",doctorList);
+//        List<User> doctorList = clinicServiceInter.getClinicDoctorList(clinicId);
+//        mv.addObject("doctorList",doctorList);
 
         return index();
     }

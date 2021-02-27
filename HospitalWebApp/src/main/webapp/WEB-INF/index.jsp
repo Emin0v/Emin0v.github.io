@@ -118,6 +118,11 @@
         <h1>Medilab səhifəsinə xoş gəldiniz</h1>
         <a href="#about" class="btn-get-started scrollto">Get Started</a>
     </div>
+
+    <div id="mycard" class="row">
+
+    </div>
+
 </section><!-- End Hero -->
 
 <main id="main">
@@ -996,6 +1001,53 @@
     })();
 </script>
 <!--End of Tawk.to Script-->
+<%--<script src="js/card.js"></script>--%>
+<script>
+    if(`${appointments}`!==null){
+        <c:forEach var="appointment" items="${appointments}">
+            var info = `Saat ${appointment.appDate} da ...`;
+            addCard(info);
+        </c:forEach>
+    }
+
+    function addCard(information) {
+        console.log("information=" + information);
+        if (information !== "") {
+            const allCards = document.getElementById("mycard");
+
+            //card
+            const card = document.createElement("div");
+            card.className = "card border-warning mb-3 col-sm";
+            card.style = "max-width: 18rem; z-index : 1 ;";
+
+            const cardHead = document.createElement("div");
+            cardHead.className = "card-header";
+            cardHead.appendChild(document.createTextNode("Randevu Vaxtı"));
+
+            const cardBody = document.createElement("div");
+            cardBody.className = "card-body text-warning";
+            //h5 tag
+            const title = document.createElement("h5");
+            title.className = "card-title";
+            //p tag
+            const info = document.createElement("p");
+            info.className = "card-text";
+            info.appendChild(document.createTextNode(information));
+
+            //add div to cardbody
+            cardBody.appendChild(title);
+            cardBody.appendChild(info);
+
+            //add cardheader and cardbody to card
+            card.appendChild(cardHead);
+            card.appendChild(cardBody);
+
+            //add card to section
+            allCards.appendChild(card);
+        }
+
+    }
+</script>
 </body>
 
 </html>
